@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Automating with Selenium and Edge in IE compatibility mode.
 
-Library    RPA.Browser.Selenium
+Library    RPA.Browser.Selenium    auto_close=${False}
 
 
 *** Variables ***
@@ -15,7 +15,7 @@ Open Default Edge In IE Mode
     [Documentation]    Opens Edge in IE mode with default configuration and automatic
     ...    webdriver management. (this might be sufficient for you)
 
-    Open Available Browser    ${URL}    browser_selection=ie
+    Open Available Browser    ${URL}    browser_selection=chrome
 
 
 Open Custom Edge In IE Mode
