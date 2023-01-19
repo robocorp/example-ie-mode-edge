@@ -18,10 +18,10 @@ Please read more about the prerequisites and how to enable IE mode for Edge belo
 ### Edge browser configuration for IE mode
 
 Allow websites to use this mode
-![Edge IE Settings](bin/1-edge-ie-settings.png)
+![Edge IE Settings](https://raw.githubusercontent.com/robocorp/example-ie-mode-edge/master/bin/1-edge-ie-settings.png)
 
 Enable button for page reload in this mode
-![Edge IE Button](bin/2-edge-ie-button.png)
+![Edge IE Button](https://raw.githubusercontent.com/robocorp/example-ie-mode-edge/master/bin/2-edge-ie-button.png)
 
 
 ## Tasks
@@ -32,4 +32,6 @@ Enable button for page reload in this mode
   to specify a custom MS Edge binary path along with its optional arguments.
 - `Open Custom Edge In IE Mode With Capabilities`: You're in full control over the
   arguments, capabilities and both webdriver and browser's used executables in order to
-  fully customize the run.
+  fully customize the run. Since the `Open Browser` keyword is used here, a webdriver
+  has to be explicitly provided. (the other tasks will automatically download and use
+  such a webdriver executable)

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Automating with Selenium and Edge in IE compatibility mode.
 
-Library    RPA.Browser.Selenium    auto_close=${True}
+Library    RPA.Browser.Selenium
 
 
 *** Variables ***
