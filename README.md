@@ -1,14 +1,35 @@
-# Template: Standard Robot Framework
+# Selenium browser automation with Edge in Internet Explorer mode
 
-This is the simplest template to start from.
+This robot demonstrates how run your Edge browser on a Windows machine in IE mode.
+This is useful for web apps that cannot run in other browsers (like Chromium Edge or
+Chrome) due to compatibility issues.
 
-- Get started from a simple task template in `tasks.robot`.
-  - Uses [Robot Framework](https://robocorp.com/docs/languages-and-frameworks/robot-framework/basics) syntax.
-- You can configure your robot `robot.yaml`.
-- You can configure dependencies in `conda.yaml`.
 
-## Learning materials
+## Requirements
 
-- [Robocorp Developer Training Courses](https://robocorp.com/docs/courses)
-- [Documentation links on Robot Framework](https://robocorp.com/docs/languages-and-frameworks/robot-framework)
-- [Example bots in Robocorp Portal](https://robocorp.com/portal)
+This was tested on Windows 10 and 11 by running the tasks below. On the system, the
+latest Microsoft Edge (Chromium based browser) was installed and also Internet Explorer
+11 was enabled in Windows Features.
+
+Please read more about the prerequisites and how to enable IE mode for Edge below:
+- [What is Internet Explorer (IE) mode?](https://learn.microsoft.com/en-us/deployedge/edge-ie-mode)
+- [Enable IE mode on Microsoft Edge](https://docs.oracle.com/cd/F52330_01/installation_guides/insbridge_rm_client_guide/Content/Guides_RateManager/Insbridge%20RateManager%20Client%20Setup%20Guide/Enable%20IE%20mode%20on%20Microsoft%20Edge.htm)
+
+### Edge browser configuration for IE mode
+
+Allow websites to use this mode
+![Edge IE Settings](bin/1-edge-ie-settings.png)
+
+Enable button for page reload in this mode
+![Edge IE Button](bin/2-edge-ie-button.png)
+
+
+## Tasks
+
+- `Open Default Edge In IE Mode`: Simplest example which opens IE with the well known
+  `Open Available Browser` keyword.
+- `Open Custom Edge In IE Mode`: Same as above, but this time you have the possibility
+  to specify a custom MS Edge binary path along with its optional arguments.
+- `Open Custom Edge In IE Mode With Capabilities`: You're in full control over the
+  arguments, capabilities and both webdriver and browser's used executables in order to
+  fully customize the run.
