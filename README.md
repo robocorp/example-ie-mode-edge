@@ -1,6 +1,6 @@
 # Selenium browser automation with Edge in Internet Explorer mode
 
-This robot demonstrates how run your Edge browser on a Windows machine in IE mode.
+This robot demonstrates how to run your Edge browser on a Windows machine in IE mode.
 This is useful for web apps that cannot run in other browsers (like Chromium Edge or
 Chrome) due to compatibility issues.
 
