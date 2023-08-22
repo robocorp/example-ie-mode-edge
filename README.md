@@ -14,6 +14,7 @@ latest Microsoft Edge (Chromium based browser) was installed and also Internet E
 Please read more about the prerequisites and how to enable IE mode for Edge below:
 - [What is Internet Explorer (IE) mode?](https://learn.microsoft.com/en-us/deployedge/edge-ie-mode)
 - [Enable IE mode on Microsoft Edge](https://docs.oracle.com/cd/F52330_01/installation_guides/insbridge_rm_client_guide/Content/Guides_RateManager/Insbridge%20RateManager%20Client%20Setup%20Guide/Enable%20IE%20mode%20on%20Microsoft%20Edge.htm)
+- [IE Driver Server configuration](https://www.selenium.dev/documentation/ie_driver_server/#required-configuration)
 
 ### Edge browser configuration for IE mode
 
