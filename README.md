@@ -16,23 +16,57 @@ Please read more about the prerequisites and how to enable IE mode for Edge belo
 - [Enable IE mode on Microsoft Edge](https://docs.oracle.com/cd/F52330_01/installation_guides/insbridge_rm_client_guide/Content/Guides_RateManager/Insbridge%20RateManager%20Client%20Setup%20Guide/Enable%20IE%20mode%20on%20Microsoft%20Edge.htm)
 - [IE Driver Server configuration](https://www.selenium.dev/documentation/ie_driver_server/#required-configuration)
 
+
 ### Edge browser configuration for IE mode
 
 Allow websites to use this mode
-![Edge IE Settings](https://raw.githubusercontent.com/robocorp/example-ie-mode-edge/master/bin/1-edge-ie-settings.png)
+![Edge IE Settings](./img/1-edge-ie-settings.png)
 
 Enable button for page reload in this mode
-![Edge IE Button](https://raw.githubusercontent.com/robocorp/example-ie-mode-edge/master/bin/2-edge-ie-button.png)
+![Edge IE Button](./img/2-edge-ie-button.png)
 
 
 ## Tasks
 
-- `Open Default Edge In IE Mode`: Simplest example which opens IE with the well known
+1. `Open Default Edge In IE Mode`: Simplest example which opens IE with the well known
   `Open Available Browser` keyword.
-- `Open Custom Edge In IE Mode`: Same as above, but this time you have the possibility
-  to specify a custom MS Edge binary path along with its optional arguments.
-- `Open Custom Edge In IE Mode With Capabilities`: You're in full control over the
-  arguments, capabilities and both webdriver and browser's used executables in order to
-  fully customize the run. Since the `Open Browser` keyword is used here, a webdriver
-  has to be explicitly provided. (the other tasks will automatically download and use
-  such a webdriver executable)
+2. `Open Private Edge In IE Mode`: Same as above, but this time you have the possibility
+  to specify a custom MS Edge binary path along with a command line argument which will
+  start the browser in private mode.
+3. `Open Custom Edge In IE Mode`: You're in full control over the arguments,
+  capabilities and both webdriver and browser's used executables in order to fully
+  customize the run. Since the `Open Browser` keyword is used here, a webdriver has to
+  be explicitly provided. (the other tasks will automatically download and use such a
+  webdriver executable matching your detected browser version)
+
+
+### Options
+
+
+#### Protected mode
+
+The last two tasks (**2** & **3**) are ignoring the "Protected Mode" setting in order
+to make your life easier, but this may also create problems when automating a legacy
+web app, therefore is advised to comment out this option and enable/disable this mode
+for all your zones. (follow the registry based approach if you don't see the checkbox)
+
+Add a `2500` DWORD key with value `3` (disabled) or `0` (enabled) and make sure it's
+set the same on **all** zones.
+
+![Protected mode](./img/3-protected-mode.png)
+
+- Task **2**: `IE_OPTIONS.ignore_protected_mode_settings = True`
+- Task **3**: `...    ignoreProtectedModeSettings    ${True}`
+
+> [How to Disable Protected Mode in Internet Explorer](https://www.lifewire.com/how-to-disable-protected-mode-in-internet-explorer-2624507)
+
+
+#### Private mode
+
+In Task **2** we experimentally run the browser in private/incognito mode and this
+requires some other options (which are set already), options that attract additional
+configuration under the registry.
+
+Add a `TabProcGrowth` DWORD key with value `0` as instructed by the error.
+
+![CLI args](./img/4-cli-args.png)

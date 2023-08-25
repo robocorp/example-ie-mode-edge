@@ -5,10 +5,10 @@ tasks:
   # Task names here are used when executing the bots, so renaming these is recommended.
   Open Default Edge In IE Mode:
     robotTaskName: Open Default Edge In IE Mode
+  Open Private Edge In IE Mode:
+    robotTaskName: Open Private Edge In IE Mode
   Open Custom Edge In IE Mode:
     robotTaskName: Open Custom Edge In IE Mode
-  Open Custom Edge In IE Mode With Capabilities:
-    robotTaskName: Open Custom Edge In IE Mode With Capabilities
 
 condaConfigFile: conda.yaml
 
