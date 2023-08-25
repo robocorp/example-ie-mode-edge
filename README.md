@@ -50,15 +50,14 @@ to make your life easier, but this may also create problems when automating a le
 web app, therefore is advised to comment out this option and enable/disable this mode
 for all your zones. (follow the registry based approach if you don't see the checkbox)
 
-Add a `2500` DWORD key with value `3` (disabled) or `0` (enabled) and make sure it's
-set the same on **all** zones.
-
-![Protected mode](./img/3-protected-mode.png)
+> Add a `2500` DWORD key with value `3` (disabled) or `0` (enabled) and make sure it's
+> set the same on **all** zones.
+> ![Protected mode](./img/3-protected-mode.png)
 
 - Task **2**: `IE_OPTIONS.ignore_protected_mode_settings = True`
 - Task **3**: `...    ignoreProtectedModeSettings    ${True}`
 
-> [How to Disable Protected Mode in Internet Explorer](https://www.lifewire.com/how-to-disable-protected-mode-in-internet-explorer-2624507)
+🔗 [How to Disable Protected Mode in Internet Explorer](https://www.lifewire.com/how-to-disable-protected-mode-in-internet-explorer-2624507)
 
 
 #### Private mode
@@ -67,6 +66,5 @@ In Task **2** we experimentally run the browser in private/incognito mode and th
 requires some other options (which are set already), options that attract additional
 configuration under the registry.
 
-Add a `TabProcGrowth` DWORD key with value `0` as instructed by the error.
-
-![CLI args](./img/4-cli-args.png)
+> Add a `TabProcGrowth` DWORD key with value `0` as instructed by the error.
+> ![CLI args](./img/4-cli-args.png)
