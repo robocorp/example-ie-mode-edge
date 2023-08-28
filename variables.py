@@ -21,5 +21,5 @@ IE_OPTIONS.add_argument("-private")
 IE_OPTIONS.force_create_process_api = True  # needed for the arguments to work
 IE_OPTIONS.ensure_clean_session = True
 
-# Required if protected mode is not consistent. (aka ON/OFF for all levels)
+# Required if "Protected Mode" is not consistent. (aka ON/OFF for all levels)
 IE_OPTIONS.ignore_protected_mode_settings = True
