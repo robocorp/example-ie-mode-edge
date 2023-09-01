@@ -22,6 +22,7 @@ artifactsDir: output
 
 PATH:
   - .
+  - bin
 PYTHONPATH:
   - .
 

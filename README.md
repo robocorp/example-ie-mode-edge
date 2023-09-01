@@ -7,9 +7,11 @@ Chrome) due to compatibility issues.
 
 ## Requirements
 
-This was tested on Windows 10 and 11 by running the tasks below. On the system, the
-latest Microsoft Edge (Chromium based browser) was installed and also Internet Explorer
-11 was enabled in Windows Features.
+This was tested mainly on Windows 10 and 11 by running the tasks below. On the system,
+the latest Microsoft Edge (Chromium based browser) was installed and also Internet
+Explorer 11 was enabled in Windows Features. We also have proofs that basic web apps
+can be automated on a Windows Server 2019, even by running a Worker agent/service
+through Control Room.
 
 Please read more about the prerequisites and how to enable IE mode for Edge below:
 - [What is Internet Explorer (IE) mode?](https://learn.microsoft.com/en-us/deployedge/edge-ie-mode)
@@ -40,6 +42,26 @@ Enable button for page reload in this mode
   webdriver executable matching your detected browser version)
 
 
+### Webdrivers selection
+
+By default, the first two tasks are automatically downloading a webdriver adequate to
+the browser and system you're using. But this happens only if the sought after
+executable is not found in *PATH* (contains robot root and [bin](./bin/) directories).
+
+- If you want to download a webdriver no matter what you have in *PATH*, simply set
+  `download=${True}` to your `Open Available Browser` call.
+- If you want to use your locally available one, either use the third Task (employing
+  the `Open Browser` keyword call) or continue to use `Open Available Browser` with
+  `download=${False}` and make sure you place the right executable name in *PATH*.
+  (copy-paste the executable you'd like to use from [bin](./bin/) inside the same
+  folder or robot root, then rename it into **IEDriverServer.exe** in order to be
+  automatically detected and used)
+
+> ⚠️ Don't forget to try with different versions and architectures of the webdriver in
+> case you experience issues, as the implicitly downloaded one will default to
+> **32bit**.
+
+
 ### Options
 
 
@@ -48,12 +70,15 @@ Enable button for page reload in this mode
 The last two tasks (**2** & **3**) are ignoring the "Protected Mode" setting in order
 to make your life easier, but this may also create problems when automating a legacy
 web app, therefore is advised to comment out this option and enable/disable this mode
-for all your zones. (follow the registry based approach if you don't see the checkbox)
+for **all** your zones. (follow the registry based approach if you don't see the
+checkbox)
 
 > Add a `2500` DWORD key with value `3` (disabled) or `0` (enabled) and make sure it's
 > set the same on **all** zones.
 > ![Protected mode](./img/3-protected-mode.png)
 
+Comment out these options once you either enabled or disabled this mode to **all** your
+zones:
 - Task **2**: `IE_OPTIONS.ignore_protected_mode_settings = True`
 - Task **3**: `...    ignoreProtectedModeSettings    ${True}`
 

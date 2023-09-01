@@ -4,8 +4,8 @@ from selenium.webdriver import IeOptions
 
 
 URL = "https://robocorp.com"
-# A 32bit version is recommended.
-WEBDRIVER_PATH = str(Path("bin") / "IEDriverServer.exe")
+# A 32bit version is recommended although.
+WEBDRIVER_PATH = str(Path("bin") / "IEDriverServer411-64.exe")
 BROWSER_PATH = str(
     Path("C:") / "Program Files (x86)" / "Microsoft" / "Edge" / "Application" /
     "msedge.exe"

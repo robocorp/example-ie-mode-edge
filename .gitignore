@@ -16,3 +16,6 @@ testrun/*
 .~lock*
 *.pkl
 *.log
+
+# Webdrivers automatically taken from PATH.
+IEDriverServer.exe
