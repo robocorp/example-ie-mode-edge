@@ -78,7 +78,7 @@ checkbox)
 
 ![Protected mode](./img/3-protected-mode.png)
 
-Comment out these options once you either enabled or disabled this mode to **all** your
+Comment out these options once you either enabled or disabled this mode on **all** your
 zones:
 - Task **2**: `IE_OPTIONS.ignore_protected_mode_settings = True`
 - Task **3**: `...    ignoreProtectedModeSettings    ${True}`
