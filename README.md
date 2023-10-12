@@ -75,7 +75,8 @@ checkbox)
 
 > Add a `2500` DWORD key with value `3` (disabled) or `0` (enabled) and make sure it's
 > set the same on **all** zones.
-> ![Protected mode](./img/3-protected-mode.png)
+
+![Protected mode](./img/3-protected-mode.png)
 
 Comment out these options once you either enabled or disabled this mode to **all** your
 zones:
@@ -92,4 +93,5 @@ requires some other options (which are set already), options that attract additi
 configuration under the registry.
 
 > Add a `TabProcGrowth` DWORD key with value `0` as instructed by the error.
-> ![CLI args](./img/4-cli-args.png)
+
+![CLI args](./img/4-cli-args.png)
