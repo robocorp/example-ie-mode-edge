@@ -8,9 +8,9 @@ channels:
 dependencies:
   # Define conda-forge packages here -> https://anaconda.org/search
   # When available, prefer the conda-forge packages over pip as installations are more efficient.
-  - python=3.10.12              # https://pyreadiness.org/3.10/
-  - truststore=0.8.0
-  - pip=23.2.1                  # https://pip.pypa.io/en/stable/news/
+  - python=3.10.12                # https://pyreadiness.org/3.10/
+  - robocorp-truststore=0.8.0     # https://pypi.org/project/robocorp-truststore/
+  - pip=23.2.1                    # https://pip.pypa.io/en/stable/news/
   - pip:
       # Define pip packages here -> https://pypi.org/
-      - rpaframework==27.7.0    # https://rpaframework.org/releasenotes.html
+      - rpaframework==27.7.0      # https://rpaframework.org/releasenotes.html
