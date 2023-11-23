@@ -4,8 +4,8 @@ from selenium.webdriver import IeOptions
 
 
 URL = "https://robocorp.com"
-# A 32bit version is recommended although.
-WEBDRIVER_PATH = str(Path("bin") / "IEDriverServer411-64.exe")
+# A 32bit version of the driver even on 64bit system/browser is recommended by Selenium.
+WEBDRIVER_PATH = str(Path("bin") / "IEDriverServer414-32.exe")
 BROWSER_PATH = str(
     Path("C:") / "Program Files (x86)" / "Microsoft" / "Edge" / "Application" /
     "msedge.exe"
@@ -21,5 +21,5 @@ IE_OPTIONS.add_argument("-private")
 IE_OPTIONS.force_create_process_api = True  # needed for the arguments to work
 IE_OPTIONS.ensure_clean_session = True
 
-# Required if "Protected Mode" is not consistent. (aka ON/OFF for all levels)
+# Required if "Protected Mode" is not consistent. (aka ON/OFF on all levels)
 IE_OPTIONS.ignore_protected_mode_settings = True

@@ -1,8 +1,8 @@
 # Selenium browser automation with Edge in Internet Explorer mode
 
-This robot demonstrates how to run your Edge browser on a Windows machine in IE mode.
-This is useful for web apps that cannot run in other browsers (like Chromium Edge or
-Chrome) due to compatibility issues.
+This task package demonstrates how to run your Edge browser on a Windows machine in
+IE mode. This is useful for web apps that cannot run in other browsers (like Chromium
+Edge or Chrome) due to compatibility issues.
 
 
 ## Requirements
@@ -46,7 +46,8 @@ Enable button for page reload in this mode
 
 By default, the first two tasks are automatically downloading a webdriver adequate to
 the browser and system you're using. But this happens only if the sought after
-executable is not found in *PATH* (contains robot root and [bin](./bin/) directories).
+executable is not found in *PATH* (which contains the project root and [bin](./bin/)
+directories).
 
 - If you want to download a webdriver no matter what you have in *PATH*, simply set
   `download=${True}` to your `Open Available Browser` call.
@@ -54,12 +55,14 @@ executable is not found in *PATH* (contains robot root and [bin](./bin/) directo
   the `Open Browser` keyword call) or continue to use `Open Available Browser` with
   `download=${False}` and make sure you place the right executable name in *PATH*.
   (copy-paste the executable you'd like to use from [bin](./bin/) inside the same
-  folder or robot root, then rename it into **IEDriverServer.exe** in order to be
+  folder or root, then rename it into **IEDriverServer.exe** in order to be
   automatically detected and used)
 
 > ⚠️ Don't forget to try with different versions and architectures of the webdriver in
 > case you experience issues, as the implicitly downloaded one will default to
-> **32bit**.
+> **32bit**. That's why you can override the behavior by setting the
+> `RPA_ALLOW_64BIT_IE` [env var](./devdata/env.json) to any value. (this takes effect
+> when a webdriver is automatically downloaded)
 
 
 ### Options
