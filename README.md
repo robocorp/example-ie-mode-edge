@@ -86,6 +86,11 @@ zones:
 - Task **2**: `IE_OPTIONS.ignore_protected_mode_settings = True`
 - Task **3**: `...    ignoreProtectedModeSettings    ${True}`
 
+💡 If you disabled/enabled the mode for all the zones at once and it still doesn't work,
+then it's time to revert these changes and go to Zone **3** only, place where you'll be
+creating only one `2500` DWORD key with value `3`. Then ensure you set the security
+level to "High" for the "Internet" zone in your IE options > "Security" tab.
+
 🔗 [How to Disable Protected Mode in Internet Explorer](https://www.lifewire.com/how-to-disable-protected-mode-in-internet-explorer-2624507)
 
 
